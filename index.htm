@@ -12,6 +12,38 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Online Shipping</title>
 
+    <style>
+        #open-bar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 40%;
+            height: 100%;
+            padding: 20px;
+            background-color: rgba(96, 95, 95, 0.947);
+            overflow-y: auto;
+        }
+
+        .openbar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .openbar-header h3 {
+            font-size: 1.3em;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        #closeMenu {
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #ffffff;
+        }
+    </style>
+
 
 </head>
 
@@ -20,23 +52,42 @@
         <nav class="flex items-center justify-between  ">
             <a href="" class="text-3xl font-bold">Magaza</a>
             <div class="">
-                <a href=""><i class="fa-solid fa-magnifying-glass text-2xl text-slate-600"></i></a>
-                <a href=""><i class="fa-solid fa-cart-shopping text-2xl text-slate-600"></i></a>
+                <span  href=""><i
+                        class="fa-solid fa-magnifying-glass text-2xl text-slate-600"></i></span>
+                <span onclick="openmenu()" href=""><i class="fa-solid fa-cart-shopping text-2xl text-slate-600"></i></span>
             </div>
         </nav>
+
+        <div id="open-bar" >
+            <div class="openbar-header w-20">
+                <h3>Səbət</h3>
+                <i onclick="closemenu()" class="fa-solid fa-xmark" id="closeMenu"></i>
+            </div>
+            <hr>
+            <div id="shopingcart" class="flex gap-6 flex-wrap p-6 w">
+
+                
+            </div>
+            
+        </div>
+
     </header>
 
     <main>
         <h1 class="text-xl font-bold mt-9">Kateqoriyalar</h1>
         <div class="btn mt-5 flex gap-10 flex-wrap">
-            <button onclick="btn1()" class="p-3 rounded-2xl bg-gray-200 transition-colors duration-300 hover:bg-gray-300">Hamisi</button>
-            <button onclick="btn2()" class="p-3 rounded-2xl bg-gray-200 transition-colors duration-300 hover:bg-gray-300">Qadin
+            <button onclick="btn1()"
+                class="p-3 rounded-2xl bg-gray-200 transition-colors duration-300 hover:bg-gray-300">Hamisi</button>
+            <button onclick="btn2()"
+                class="p-3 rounded-2xl bg-gray-200 transition-colors duration-300 hover:bg-gray-300">Qadin
                 Geyimleri</button>
-            <button onclick="btn3()" class="p-3 rounded-2xl bg-gray-200 transition-colors duration-300 hover:bg-gray-300">Kisi
+            <button onclick="btn3()"
+                class="p-3 rounded-2xl bg-gray-200 transition-colors duration-300 hover:bg-gray-300">Kisi
                 Geyimleri</button>
             <button onclick="btn4()"
                 class="p-3 rounded-2xl bg-gray-200 transition-colors duration-300 hover:bg-gray-300">Elektronika</button>
-            <button onclick="btn5()" class="p-3 rounded-2xl bg-gray-200 transition-colors duration-300 hover:bg-gray-300">Zinet
+            <button onclick="btn5()"
+                class="p-3 rounded-2xl bg-gray-200 transition-colors duration-300 hover:bg-gray-300">Zinet
                 esyalari</button>
         </div>
 
